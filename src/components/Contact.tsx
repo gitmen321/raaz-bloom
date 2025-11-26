@@ -26,7 +26,7 @@ export const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Raaz CH",
+      value: "Raaz ",
       href: "https://www.linkedin.com/in/raaz-ch-a77535277/",
       color: "web3-blue",
     },
@@ -110,7 +110,7 @@ export const Contact = () => {
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
           <p className="text-muted-foreground">
-            © 2024 Raaz CH. Built with passion for smooth experiences.
+            © 2024 Raaz . Built with passion for smooth experiences.
           </p>
         </motion.div>
       </div>

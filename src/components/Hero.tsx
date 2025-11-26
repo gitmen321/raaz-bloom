@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <ParticleNetwork />
-      
+
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Text Content */}
@@ -36,7 +36,7 @@ export const Hero = () => {
             >
               Hi, I'm{" "}
               <span className="bg-gradient-nature bg-clip-text text-transparent">
-                Raaz CH
+                Raaz
               </span>
             </motion.h1>
 
@@ -66,7 +66,7 @@ export const Hero = () => {
               className="flex flex-wrap gap-4 pt-4"
             >
               <Button variant="hero" size="lg" asChild>
-                <a href="https://github.com/raazch" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/gitmen321" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                   GitHub
                 </a>
@@ -77,10 +77,17 @@ export const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
+              {/* <Button variant="outline" size="lg">
                 <Download className="w-5 h-5" />
                 Download CV
-              </Button>
+              </Button> */}
+              <a href="/raaz-cv.pdf" download target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg">
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </Button>
+              </a>
+
               <Button variant="outline" size="lg" asChild>
                 <a href="#contact">
                   <Mail className="w-5 h-5" />
