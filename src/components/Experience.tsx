@@ -9,9 +9,21 @@ export const Experience = () => {
 
   const experiences = [
     {
+      company: "Freelance",
+      role: "Website & App Development",
+      period: "2025 June - Present",
+      achievements: [
+        "Delivered high-quality mobile apps for clients",
+        "Implemented scalable backend integrations",
+        "Improved app performance and user experience",
+        "Designed full-stack digital solutions for small businesses",
+      ],
+      gradient: "from-accent to-web3-blue",
+    },
+    {
       company: "White Matrix Solutions",
       role: "Mobile App Developer",
-      period: "2023 - Present",
+      period: "2024 September - 2025 June",
       achievements: [
         "Built and released production-ready Flutter applications",
         "Improved app performance and reduced load times by 40%",
@@ -24,7 +36,7 @@ export const Experience = () => {
     {
       company: "Sutherland",
       role: "Customer Support Associate",
-      period: "2022 - 2023",
+      period: "2025 May - 2025 November",
       achievements: [
         "Resolved complex customer technical issues",
         "Maintained high customer satisfaction ratings",
@@ -33,6 +45,7 @@ export const Experience = () => {
       ],
       gradient: "from-accent to-web3-blue",
     },
+    
   ];
 
   return (

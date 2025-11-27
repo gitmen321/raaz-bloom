@@ -19,12 +19,12 @@ export const Skills = () => {
     },
     {
       title: "Web3 & Blockchain",
-      skills: ["Web3 Basics", "EVM", "Wallets", "Blockchain Networks", "Smart Contracts"],
+      skills: ["Web3 Basics", "EVM", "Wallets", "Blockchain Networks", "Smart Contracts", "Solidity"],
       color: "web3-blue",
     },
     {
       title: "Tools & Others",
-      skills: ["Git", "GitHub", "Dio", "Firebase", "API Integration"],
+      skills: ["Git", "GitHub", "Dio", "Firebase", "API Integration", "AWS"],
       color: "primary",
     },
   ];

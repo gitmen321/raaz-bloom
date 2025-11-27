@@ -110,7 +110,7 @@ export const Contact = () => {
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
           <p className="text-muted-foreground">
-            © 2024 Raaz . Built with passion for smooth experiences.
+            © 2025 Raaz . Built with passion for smooth experiences.
           </p>
         </motion.div>
       </div>
