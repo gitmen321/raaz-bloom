@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Download, Mail } from "lucide-react";
 import { ParticleNetwork } from "./ParticleNetwork";
+import { SplineHero } from "./hero/SplineHero";
 
 export const Hero = () => {
   return (
@@ -97,61 +98,14 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right - 3D Animation Area */}
+          {/* Right - 3D Spline Animation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative h-[500px] lg:h-[600px]"
+            className="relative h-[450px] lg:h-[600px]"
           >
-            <div className="absolute inset-0 bg-gradient-web3 opacity-20 blur-3xl rounded-full animate-pulse-glow" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                animate={{
-                  y: [0, -20, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative w-full h-full flex items-center justify-center"
-              >
-                <div className="w-64 h-64 lg:w-96 lg:h-96 rounded-full border-2 border-primary/30 flex items-center justify-center relative">
-                  <div className="w-48 h-48 lg:w-72 lg:h-72 rounded-full border-2 border-accent/30 flex items-center justify-center animate-spin" style={{ animationDuration: '20s' }}>
-                    <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full bg-gradient-nature shadow-glow" />
-                  </div>
-                  {/* Orbiting nodes */}
-                  {[...Array(8)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-4 h-4 bg-accent rounded-full shadow-purple"
-                      style={{
-                        top: '50%',
-                        left: '50%',
-                        marginTop: '-8px',
-                        marginLeft: '-8px',
-                      }}
-                      animate={{
-                        rotate: 360,
-                      }}
-                      transition={{
-                        duration: 10 + i * 2,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    >
-                      <div
-                        style={{
-                          transform: `rotate(${(360 / 8) * i}deg) translateX(${120 + i * 10}px)`,
-                        }}
-                        className="w-full h-full"
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+            <SplineHero />
           </motion.div>
         </div>
       </div>
