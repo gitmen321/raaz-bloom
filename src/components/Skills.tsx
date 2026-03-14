@@ -8,24 +8,29 @@ export const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Mobile Development",
-      skills: ["Flutter", "Dart", "GetX", "Riverpod", "Bloc"],
+      title: "Backend Engineering",
+      skills: ["Node.js", "Express.js", "REST API Design", "Authentication (JWT)", "Redis Caching", "Rate Limiting", "API Security"],
       color: "primary",
     },
     {
-      title: "Backend & Database",
-      skills: ["Node.js", "MongoDB", "AWS", "REST APIs", "Java"],
+      title: "Databases",
+      skills: ["MongoDB", "Data Modeling", "Transaction Logging", "Index Optimization"],
       color: "accent",
     },
     {
-      title: "Web3 & Blockchain",
-      skills: ["Web3 Basics", "EVM", "Wallets", "Blockchain Networks", "Smart Contracts", "Solidity"],
+      title: "Infrastructure & DevOps",
+      skills: ["Docker", "CI/CD (GitHub Actions)", "API Documentation (Swagger)", "Logging & Monitoring"],
       color: "web3-blue",
     },
     {
-      title: "Tools & Others",
-      skills: ["Git", "GitHub", "Dio", "Firebase", "API Integration", "AWS"],
+      title: "Mobile Development",
+      skills: ["Flutter", "Dart", "State Management (Bloc / Riverpod)"],
       color: "primary",
+    },
+    {
+      title: "Tools",
+      skills: ["Git", "Postman", "VS Code", "Linux"],
+      color: "accent",
     },
   ];
 

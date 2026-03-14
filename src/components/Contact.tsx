@@ -109,7 +109,10 @@ export const Contact = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
+            Currently transitioning into Backend Engineering roles and open to opportunities where I can work on scalable systems, APIs, and backend infrastructure.
+          </p>
+          <p className="text-muted-foreground text-sm">
             © 2025 Raaz . Built with passion for smooth experiences.
           </p>
         </motion.div>

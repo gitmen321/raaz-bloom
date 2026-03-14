@@ -9,43 +9,30 @@ export const Experience = () => {
 
   const experiences = [
     {
-      company: "Freelance",
-      role: "Website & App Development",
-      period: "2025 June - Present",
+      company: "Software Developer (Freelance)",
+      role: "Software Developer",
+      period: "2025 – Present",
       achievements: [
-        "Delivered high-quality mobile apps for clients",
-        "Implemented scalable backend integrations",
-        "Improved app performance and user experience",
-        "Designed full-stack digital solutions for small businesses",
+        "Developed production-ready mobile applications used by thousands of users",
+        "Designed and integrated backend APIs for real-world applications",
+        "Improved performance and stability of mobile systems through debugging and architecture improvements",
+        "Built scalable backend services and authentication systems",
       ],
       gradient: "from-accent to-web3-blue",
     },
     {
-      company: "White Matrix Solutions",
-      role: "Mobile App Developer",
-      period: "2024 September - 2025 June",
+      company: "White Matrix",
+      role: "Mobile Application Developer",
+      period: "2024 – 2025",
       achievements: [
-        "Built and released production-ready Flutter applications",
-        "Improved app performance and reduced load times by 40%",
-        "Designed efficient database schemas and RESTful APIs",
-        "Integrated real-time location tracking features",
-        "Collaborated with cross-functional teams on feature delivery",
+        "Developed cross-platform mobile applications using Flutter for Android and iOS.",
+        "Integrated mobile apps with backend APIs and authentication systems.",
+        "Implemented clean architecture patterns and improved application performance.",
+        "Collaborated with backend services for data management and API communication.",
+        "Delivered production-ready mobile applications used by real users.",
       ],
       gradient: "from-primary to-accent",
     },
-    {
-      company: "Sutherland",
-      role: "Customer Support Associate",
-      period: "2025 May - 2025 November",
-      achievements: [
-        "Resolved complex customer technical issues",
-        "Maintained high customer satisfaction ratings",
-        "Strengthened communication and problem-solving skills",
-        "Developed analytical thinking for troubleshooting",
-      ],
-      gradient: "from-accent to-web3-blue",
-    },
-    
   ];
 
   return (

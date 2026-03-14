@@ -25,7 +25,7 @@ export const Hero = () => {
               className="inline-block"
             >
               <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full">
-                Developer & Web3 Enthusiast
+                Backend Engineer
               </span>
             </motion.div>
 
@@ -45,9 +45,9 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl lg:text-2xl text-muted-foreground font-light"
+              className="text-xl lg:text-2xl text-muted-foreground font-light mb-4"
             >
-              Flutter Developer • Fullstack • Web3 Enthusiast
+              Backend Engineer • Scalable Systems • API & Infrastructure
             </motion.p>
 
             <motion.p
@@ -56,8 +56,9 @@ export const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-foreground/80 max-w-xl leading-relaxed"
             >
-              I build smooth, immersive digital experiences — from mobile apps to
-              modern full-stack systems and Web3 interactions.
+              I build secure, scalable backend systems and APIs designed for real-world production environments. My experience spans authentication systems, distributed caching, rate limiting, and scalable service architecture.
+              <br /><br />
+              Previously focused on Flutter mobile development, I now specialize in backend engineering using Node.js, Redis, Docker, and modern cloud tooling.
             </motion.p>
 
             <motion.div
@@ -82,7 +83,7 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 Download CV
               </Button> */}
-              <a href="/raaz-cv.pdf" download target="_blank" rel="noopener noreferrer">
+              <a href="/Raaz_FullStackEngineer_Resume.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
                   <Download className="w-5 h-5" />
                   Download CV

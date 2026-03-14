@@ -9,19 +9,19 @@ export const About = () => {
 
   const features = [
     {
-      icon: Code2,
-      title: "Mobile Development",
-      description: "Flutter developer with real-world deployed apps reaching 5,000+ downloads",
+      icon: Blocks,
+      title: "Backend Engineering",
+      description: "Building scalable backend systems, APIs, secure authentication, and managing distributed architecture",
     },
     {
-      icon: Blocks,
-      title: "Fullstack Experience",
-      description: "Backend architecture with Node.js, MongoDB, and AWS cloud infrastructure",
+      icon: Code2,
+      title: "Mobile Background",
+      description: "Real-world experience building and deploying production Flutter apps for thousands of users",
     },
     {
       icon: Sparkles,
-      title: "Web3 Passion",
-      description: "Exploring blockchain networks, wallets, EVM, and decentralized technologies",
+      title: "Future Architecture",
+      description: "Exploring architectures that combine robust backend systems with blockchain and decentralized networks",
     },
   ];
 
@@ -51,20 +51,13 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90 leading-relaxed">
-              I'm a <strong className="text-primary">Flutter developer</strong> who loves creating 
-              smooth, intuitive mobile experiences. My apps aren't just code — they're crafted 
-              with attention to UI/UX, performance, and real-world usability.
+              I'm a <strong className="text-primary">software engineer</strong> focused on backend systems, API design, and scalable architecture. My development journey started with Flutter mobile applications, where I built and deployed production apps used by thousands of users.
             </p>
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Beyond mobile, I've built <strong className="text-accent">fullstack systems</strong> with 
-              Node.js, MongoDB, and AWS, handling everything from database design to API optimization. 
-              I thrive on solving complex architecture challenges.
+              Over time, my curiosity shifted toward how systems actually scale behind the scenes — authentication flows, caching layers, distributed systems, and backend infrastructure. Recently, I designed and built a <strong className="text-accent">production-style backend system</strong> from scratch, implementing secure authentication, Redis-based rate limiting, caching strategies, audit logging, and a wallet transaction ledger.
             </p>
             <p className="text-lg text-foreground/90 leading-relaxed">
-              What excites me most? <strong className="text-web3-blue">Web3 and blockchain</strong>. 
-              I'm passionate about decentralized networks, smart contracts, EVM, and building 
-              the future of digital interactions. My portfolio blends nature-inspired design 
-              with futuristic Web3 aesthetics — just like my approach to development.
+              I enjoy solving problems around performance, reliability, and system design, and I'm currently focusing on growing into a strong backend and distributed systems engineer. Long-term, I'm exploring architectures that combine <strong className="text-web3-blue">backend infrastructure with blockchain systems</strong> and decentralized networks.
             </p>
           </motion.div>
 
