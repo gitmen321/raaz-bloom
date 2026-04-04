@@ -83,7 +83,7 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 Download CV
               </Button> */}
-              <a href="/backend_engineering_resume.pdf" download target="_blank" rel="noopener noreferrer">
+              <a href="/backend_software_engineering_resume.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
                   <Download className="w-5 h-5" />
                   Download CV

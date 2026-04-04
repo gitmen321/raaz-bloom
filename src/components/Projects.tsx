@@ -10,6 +10,22 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "TaskFlow — SaaS Task Management Platform",
+      description: "Enterprise-grade multi-tenant backend for team task management with advanced dependency resolution and role-based access control.",
+      features: [
+        "Modular NestJS REST API with dependency injection, designed for horizontal scaling",
+        "Google OAuth2 social login with Argon2id-hashed JWT rotation & session tracking",
+        "DAG-based task dependency engine for scheduling and execution ordering",
+        "Granular RBAC authorization with PostgreSQL schemas via Prisma ORM",
+        "Compound indexes on paginated queries to eliminate sequential scans",
+        "Dockerized full-stack deployment for reproducible multi-environment orchestration",
+      ],
+      tech: ["NestJS", "TypeScript", "PostgreSQL", "Prisma ORM", "Passport.js", "OAuth2", "Docker"],
+      stats: "Production Architecture",
+      gradient: "from-web3-blue to-primary",
+      githubUrl: "https://github.com/gitmen321/taskflow-backend"
+    },
+    {
       title: "RZV Backend System",
       description: "Production-style backend system designed for authentication, wallet transactions, and reward management.",
       features: [
@@ -112,15 +128,18 @@ export const Projects = () => {
 
                   {/* Action buttons */}
                   <div className="flex gap-3 pt-4">
-                    <Button variant="outline" size="sm" className="flex-1" asChild>
-                      <a href={project.viewUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
+                    {project.viewUrl && (
+                      <Button variant="outline" size="sm" className="flex-1" asChild>
+                        <a href={project.viewUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          View
+                        </a>
+                      </Button>
+                    )}
+                    <Button variant={project.viewUrl ? "ghost" : "outline"} size="sm" className={project.viewUrl ? "" : "flex-1"} asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4" />
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
                       </a>
                     </Button>
                   </div>
