@@ -1,0 +1,137 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[left=0.5in, right=0.5in, top=0.55in, bottom=0.35in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{darkblue}{RGB}{0, 0, 139}
+\usepackage[colorlinks=true, urlcolor=darkblue, linkcolor=darkblue]{hyperref}
+
+\newcommand{\faPhone}{}
+\newcommand{\faEnvelope}{}
+\newcommand{\faLinkedin}{}
+\newcommand{\faGithub}{}
+\newcommand{\faGlobe}{}
+\newcommand{\faMapMarker}{}
+
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\noindent
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\LARGE \textbf{Raaz}} \\ \vspace{2pt}
+{\small \textbf{Software Engineer} \textbar{} Python, Node.js, SQL \textbar{} Microservices, AI Integration \& Automation} \\ \vspace{2pt}
+\small
+\faMapMarker\ \textbf{Kannur, Kerala (Open to Immediate Relocation to Kochi)} \\ \vspace{2pt}
+\faPhone\ 9605633156 \quad \textbar{} \quad
+\faEnvelope\ \href{mailto:raazraz621@gmail.com}{raazraz621@gmail.com} \quad \textbar{} \quad
+\faLinkedin\ \href{https://linkedin.com/in/raaz-ch-a77535277/}{LinkedIn} \quad \textbar{} \quad
+\faGithub\ \href{https://github.com/gitmen321}{GitHub} \quad \textbar{} \quad
+\faGlobe\ \href{https://raazportfolio.vercel.app/}{Portfolio}
+\end{center}
+
+\vspace{1pt}
+
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+\noindent\small{Software Engineer with hands-on experience designing, building, and operating scalable backend systems, microservices, and AI-enabled automation. Proficient in \textbf{Python} and \textbf{Node.js} with strong foundations in \textbf{data structures \& algorithms, API development, OOP, and SQL}. Demonstrated learning agility in rapidly adopting new AI platforms, data pipelines, and frameworks. Effective collaborator in distributed, cross-functional engineering teams.}
+
+\vspace{1pt}
+
+%----------SKILLS----------
+\section{Technical \& Professional Expertise}
+\begin{itemize}[leftmargin=0.15in, label={}, topsep=1pt, itemsep=1pt]
+\item \small{\textbf{Programming Languages:} Python, JavaScript (Node.js), TypeScript, SQL (PostgreSQL), Go (Fundamentals)}
+\item \small{\textbf{Software Engineering:} Data Structures \& Algorithms, OOP \& Functional Design, API Development, System Architecture}
+\item \small{\textbf{Backend \& Integration:} Microservices, REST APIs, Event-Driven Architecture, Webhook Systems, NestJS, Express}
+\item \small{\textbf{Data \& AI:} Data Ingestion/Validation Pipelines, ETL Concepts, RAG Architecture, Agentic Workflows, LLM Integration}
+\item \small{\textbf{DevOps \& Cloud:} Git, Docker, CI/CD Pipelines, Cloud Deployment, Monitoring \& Observability, Production Troubleshooting}
+\item \small{\textbf{Testing \& Quality:} Unit Testing, Integration Testing (Jest, Supertest), Code Reviews, Development Best Practices}
+\end{itemize}
+
+\vspace{1pt}
+
+%----------EXPERIENCE----------
+\section{Professional Experience}
+
+\resumeSubheading
+{Software Developer}{Jun 2025 -- Present}
+{Self-Employed (Backend Services \& AI Automation)}{Remote}
+
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt]
+\resumeItem{Designed and developed scalable backend services, REST APIs, and automation tools using \textbf{Python} and \textbf{Node.js}, translating functional requirements from distributed stakeholders into production-ready technical solutions.}
+\resumeItem{Built data ingestion and validation pipelines for AI-enabled systems, integrating LLM models and agentic workflows into operational backend services to automate document processing and intelligent querying.}
+\resumeItem{Led code reviews, architecture discussions, and CI/CD pipeline management, ensuring deployment reliability, production monitoring, and rapid troubleshooting across cloud-hosted environments.}
+\end{itemize}
+
+\vspace{2pt}
+
+\resumeSubheading
+{Software Engineer}{Nov 2024 -- Jun 2025}
+{White Matrix}{India}
+
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt]
+\resumeItem{Developed and maintained software components, services, and enterprise API integrations in a fast-paced, cross-functional environment, rapidly adopting new tools and frameworks as the technology landscape evolved.}
+\resumeItem{Collaborated with global product, engineering, and design teams to deliver scalable solutions, enforcing strict version control (Git) protocols, agile best practices, and clean, well-documented code standards.}
+\end{itemize}
+
+\vspace{1pt}
+
+%----------PROJECTS----------
+\section{Key Technical Projects}
+
+\resumeSubheading
+{AI-Enabled RAG Chatbot --- Intelligent Automation Microservice \normalfont\small --- \href{https://github.com/gitmen321}{GitHub}}{2026}
+{Python, FastAPI, LangChain, Vector Database, LLM Integration}{}
+
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt]
+\resumeItem{Architected a \textbf{Retrieval-Augmented Generation (RAG)} microservice in \textbf{Python/FastAPI}, integrating AI models and agentic workflows into a scalable backend to automate intelligent document querying and response generation.}
+\resumeItem{Built end-to-end \textbf{data ingestion, validation, and transformation pipelines} to process unstructured data, perform chunking and embedding, and load into vector storage --- demonstrating core \textbf{ETL and data engineering} skills.}
+\end{itemize}
+
+\vspace{2pt}
+
+\resumeSubheading
+{TaskFlow --- Workflow Automation \& Event-Driven Task Engine \normalfont\small --- \href{https://github.com/gitmen321/taskflow-backend}{GitHub}}{2026}
+{Node.js, NestJS, TypeScript, PostgreSQL, BullMQ, Redis}{}
+
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt]
+\resumeItem{Designed scalable \textbf{APIs and event-driven microservices} using NestJS and Redis, building automated workflow queues (BullMQ) for heavy asynchronous job processing --- directly applicable to \textbf{procurement and accounts payable automation}.}
+\resumeItem{Applied strict \textbf{OOP and functional design} principles with Prisma ORM for optimized \textbf{SQL (PostgreSQL)} queries, ensuring clean, maintainable, and well-documented code with comprehensive unit and integration tests.}
+\end{itemize}
+
+\vspace{2pt}
+
+\resumeSubheading
+{Financial Ledger API --- Enterprise-Grade Backend \normalfont\small --- \href{https://github.com/gitmen321/rzv_backend}{GitHub} \textbar{} \href{https://rzv-frontend.vercel.app}{Live}}{2026}
+{Node.js, Express, MongoDB, Redis, Jest, Docker, CI/CD}{}
+
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=1pt]
+\resumeItem{Delivered a production-ready financial services API with strong emphasis on \textbf{unit and integration testing} (Jest, Supertest) and \textbf{observability}, ensuring the stability of core transaction and ledger endpoints.}
+\resumeItem{Engineered ACID-compliant transaction workflows and enterprise-grade \textbf{REST API integrations}, reducing database bottlenecks 40\% through Redis cache-aside pattern --- relevant to \textbf{finance and shared-services} systems.}
+\end{itemize}
+
+\vspace{1pt}
+
+%----------EDUCATION----------
+\section{Education}
+\resumeSubheading
+{Bachelor's Degree in Computer Application (BCA)}{}
+{Jamia Hamdard University}{Delhi, India}
+
+\end{document}

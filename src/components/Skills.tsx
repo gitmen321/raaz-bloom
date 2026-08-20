@@ -8,29 +8,34 @@ export const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Backend Engineering",
-      skills: ["Node.js", "Express.js", "REST API Design", "Authentication (JWT)", "Redis Caching", "Rate Limiting", "API Security"],
+      title: "Languages",
+      skills: ["TypeScript", "JavaScript", "Python", "SQL", "Dart"],
       color: "primary",
     },
     {
-      title: "Databases",
-      skills: ["MongoDB", "Data Modeling", "Transaction Logging", "Index Optimization"],
+      title: "Backend & Cloud",
+      skills: ["Node.js", "Express", "FastAPI", "Supabase", "Deno Edge Functions", "AWS Rekognition"],
       color: "accent",
     },
     {
-      title: "Infrastructure & DevOps",
-      skills: ["Docker", "CI/CD (GitHub Actions)", "API Documentation (Swagger)", "Logging & Monitoring"],
+      title: "AI & LLM Orchestration",
+      skills: ["LangChain", "LangGraph", "LangSmith", "Vector DBs", "RAG Pipelines"],
       color: "web3-blue",
     },
     {
-      title: "Mobile Development",
-      skills: ["Flutter", "Dart", "State Management (Bloc / Riverpod)"],
+      title: "Frontend & Mobile",
+      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Flutter", "PWAs"],
       color: "primary",
     },
     {
-      title: "Tools",
-      skills: ["Git", "Postman", "VS Code", "Linux"],
+      title: "Data & Architecture",
+      skills: ["PostgreSQL (RLS, pg_cron)", "Redis", "Distributed Caching", "Event-Driven Architecture"],
       color: "accent",
+    },
+    {
+      title: "Infrastructure & Tools",
+      skills: ["Docker", "CI/CD", "Git", "Linux POS Ingestion", "Client Diagnostics"],
+      color: "web3-blue",
     },
   ];
 

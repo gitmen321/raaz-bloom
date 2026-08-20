@@ -10,18 +10,18 @@ export const About = () => {
   const features = [
     {
       icon: Blocks,
-      title: "Backend Engineering",
-      description: "Building scalable backend systems, APIs, secure authentication, and managing distributed architecture",
+      title: "Forward Deployment",
+      description: "Embedding directly with clients to architect scalable web, mobile, and edge-computing solutions in complex enterprise environments",
     },
     {
       icon: Code2,
-      title: "Mobile Background",
-      description: "Real-world experience building and deploying production Flutter apps for thousands of users",
+      title: "Full-Stack Delivery",
+      description: "End-to-end ownership from APIs and AI pipelines to PWAs, hardware ingestion, and production infrastructure",
     },
     {
       icon: Sparkles,
-      title: "Future Architecture",
-      description: "Exploring architectures that combine robust backend systems with blockchain and decentralized networks",
+      title: "Execution Philosophy",
+      description: "Optimizing for speed, reliability, and blocker prevention—always prioritizing solutions that are correct, fast, and clean",
     },
   ];
 
@@ -51,13 +51,7 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90 leading-relaxed">
-              I'm a <strong className="text-primary">software engineer</strong> focused on backend systems, API design, and scalable architecture. My development journey started with Flutter mobile applications, where I built and deployed production apps used by thousands of users.
-            </p>
-            <p className="text-lg text-foreground/90 leading-relaxed">
-              Over time, my curiosity shifted toward how systems actually scale behind the scenes — authentication flows, caching layers, distributed systems, and backend infrastructure. Recently, I designed and built a <strong className="text-accent">production-style backend system</strong> from scratch, implementing secure authentication, Redis-based rate limiting, caching strategies, audit logging, and a wallet transaction ledger.
-            </p>
-            <p className="text-lg text-foreground/90 leading-relaxed">
-              I enjoy solving problems around performance, reliability, and system design, and I'm currently focusing on growing into a strong backend and distributed systems engineer. Long-term, I'm exploring architectures that combine <strong className="text-web3-blue">backend infrastructure with blockchain systems</strong> and decentralized networks.
+              I am a <strong className="text-primary">Forward Deployed Engineer and Full-Stack Developer</strong> specializing in rapid technical deployment for complex enterprise environments. I bridge the gap between operational bottlenecks and high-ROI software ecosystems by embedding directly with clients to architect scalable web, mobile, and edge-computing solutions. My engineering philosophy optimizes for execution speed, reliability, and blocker prevention—always prioritizing solutions that are correct, fast, and clean.
             </p>
           </motion.div>
 

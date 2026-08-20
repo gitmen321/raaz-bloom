@@ -10,6 +10,34 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Rozana Procurement Intelligence Engine",
+      description: "Enterprise procurement intelligence with deterministic LangGraph decision pipelines and auditable AI narration for reproducible purchasing decisions.",
+      features: [
+        "Architected a 7-node LangGraph decision pipeline and deterministic math engine to automate enterprise procurement",
+        "Confined the LLM strictly to a narration layer for 100% reproducible and auditable purchasing decisions",
+        "Ingested 893,437 ERP sales rows into Supabase; identified SAR 642,382 in preventable over-buys during backtesting",
+        "Resolved a severe Supabase database crash loop under 1-2M parallel API calls by enforcing batch writes and concurrency limits",
+        "Built a 15+ endpoint FastAPI backend with human-in-the-loop approval workflows, fully traced via LangSmith",
+      ],
+      tech: ["Python", "LangGraph", "LangChain", "Supabase", "FastAPI", "Claude Haiku", "LangSmith"],
+      stats: "Enterprise AI & Data Architecture (2026)",
+      gradient: "from-web3-blue to-primary",
+    },
+    {
+      title: "Station Command — Fuel Station Operations Platform",
+      description: "End-to-end multi-tenant PWA replacing paper workflows for HPCL fuel station operations with embedded Linux POS ingestion.",
+      features: [
+        "Shipped an end-to-end multi-tenant PWA replacing paper workflows for HPCL fuel station operations",
+        "Built a Python sync agent on embedded Linux POS terminals streaming 1,700+ daily transactions to PostgreSQL via Edge Functions",
+        "Re-architected ingestion cursor to a timestamp-based drain loop with self-healing restarts, ensuring 100% data pipeline uptime",
+        "Executed a zero-downtime security migration to Supabase auth, implementing RBAC and RLS across 30+ tables",
+        "Integrated multi-modal hardware (NFC, PIN, Biometrics) and AWS Rekognition (1:N) for edge-based attendance tracking",
+      ],
+      tech: ["React", "TypeScript", "Supabase", "Python", "Deno Edge Functions", "AWS Rekognition"],
+      stats: "Full-Stack PWA & Hardware Data Ingestion (2026)",
+      gradient: "from-primary to-accent",
+    },
+    {
       title: "TaskFlow — SaaS Task Management Platform",
       description: "Enterprise-grade multi-tenant backend for team task management with advanced dependency resolution and role-based access control.",
       features: [
@@ -22,7 +50,7 @@ export const Projects = () => {
       ],
       tech: ["NestJS", "TypeScript", "PostgreSQL", "Prisma ORM", "Passport.js", "OAuth2", "Docker"],
       stats: "Production Architecture",
-      gradient: "from-web3-blue to-primary",
+      gradient: "from-accent to-web3-blue",
       githubUrl: "https://github.com/gitmen321/taskflow-backend"
     },
     {
@@ -41,26 +69,9 @@ export const Projects = () => {
       ],
       tech: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "Jest", "Swagger", "CI/CD"],
       stats: "Production Ready",
-      gradient: "from-primary to-accent",
+      gradient: "from-web3-blue to-primary",
       viewUrl: "https://rzv-backend.onrender.com/api/health",
       githubUrl: "https://github.com/gitmen321/rzv_backend"
-    },
-    {
-      title: "RZV Admin Dashboard (Frontend Demo)",
-      description: "Admin dashboard built to demonstrate and interact with the RZV backend system.",
-      features: [
-        "Secure admin authentication",
-        "User management interface",
-        "Wallet transaction management",
-        "Dashboard statistics and analytics",
-        "Pagination and filtering",
-        "Clean dark theme UI",
-      ],
-      tech: ["Next.js", "React", "Tailwind CSS", "REST APIs"],
-      stats: "Live Demo",
-      gradient: "from-accent to-web3-blue",
-      viewUrl: "https://rzv-frontend.vercel.app",
-      githubUrl: "https://github.com/gitmen321/rzv_frontend"
     },
   ];
 

@@ -26,7 +26,7 @@ export const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Raaz ",
+      value: "Muhammad Raz",
       href: "https://www.linkedin.com/in/raaz-ch-a77535277/",
       color: "web3-blue",
     },
@@ -110,10 +110,10 @@ export const Contact = () => {
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
           <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
-            Currently transitioning into Backend Engineering roles and open to opportunities where I can work on scalable systems, APIs, and backend infrastructure.
+            Forward Deployed Engineer & Full-Stack Developer open to opportunities where I can embed with teams to ship scalable enterprise systems, AI pipelines, and production infrastructure.
           </p>
           <p className="text-muted-foreground text-sm">
-            © 2025 Raaz . Built with passion for smooth experiences.
+            © 2025 Muhammad Raz. Built with passion for smooth experiences.
           </p>
         </motion.div>
       </div>

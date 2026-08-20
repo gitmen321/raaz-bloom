@@ -25,7 +25,7 @@ export const Hero = () => {
               className="inline-block"
             >
               <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full">
-                Backend Engineer
+                Forward Deployed Engineer & Full-Stack Developer
               </span>
             </motion.div>
 
@@ -37,7 +37,7 @@ export const Hero = () => {
             >
               Hi, I'm{" "}
               <span className="bg-gradient-nature bg-clip-text text-transparent">
-                Raaz
+                Muhammad Raz
               </span>
             </motion.h1>
 
@@ -47,7 +47,7 @@ export const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl lg:text-2xl text-muted-foreground font-light mb-4"
             >
-              Backend Engineer • Scalable Systems • API & Infrastructure
+              Forward Deployed Engineer & Full-Stack Developer
             </motion.p>
 
             <motion.p
@@ -56,9 +56,9 @@ export const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-foreground/80 max-w-xl leading-relaxed"
             >
-              I build secure, scalable backend systems and APIs designed for real-world production environments. My experience spans authentication systems, distributed caching, rate limiting, and scalable service architecture.
+              Architecting scalable APIs, resilient hardware pipelines, and deterministic AI systems for enterprise production.
               <br /><br />
-              Previously focused on Flutter mobile development, I now specialize in backend engineering using Node.js, Redis, Docker, and modern cloud tooling.
+              Kannur, Kerala, India
             </motion.p>
 
             <motion.div
@@ -83,7 +83,7 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 Download CV
               </Button> */}
-              <a href="/backend_software_engineering_resume.pdf" download target="_blank" rel="noopener noreferrer">
+              <a href="/MuhammadRazCv.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
                   <Download className="w-5 h-5" />
                   Download CV
