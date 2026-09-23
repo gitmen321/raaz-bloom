@@ -25,7 +25,7 @@ export const Hero = () => {
               className="inline-block"
             >
               <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full">
-                Forward Deployed Engineer & Full-Stack Developer
+                Full-Stack Developer • Production AI Systems
               </span>
             </motion.div>
 
@@ -47,7 +47,7 @@ export const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl lg:text-2xl text-muted-foreground font-light mb-4"
             >
-              Forward Deployed Engineer & Full-Stack Developer
+              I build backends, AI pipelines, and operational software that businesses run on.
             </motion.p>
 
             <motion.p
@@ -56,7 +56,7 @@ export const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-foreground/80 max-w-xl leading-relaxed"
             >
-              Architecting scalable APIs, resilient hardware pipelines, and deterministic AI systems for enterprise production.
+              I design and ship AI-powered tools, APIs, and automation systems that real businesses depend on daily — from enterprise procurement to fuel station operations.
               <br /><br />
               Kannur, Kerala, India
             </motion.p>

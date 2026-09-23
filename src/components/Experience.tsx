@@ -9,14 +9,14 @@ export const Experience = () => {
 
   const experiences = [
     {
-      company: "Software Developer (Freelance)",
-      role: "Software Developer",
+      company: "Independent Developer (Freelance)",
+      role: "Full-Stack & AI Systems Developer",
       period: "2025 – Present",
       achievements: [
-        "Developed production-ready mobile applications used by thousands of users",
-        "Designed and integrated backend APIs for real-world applications",
-        "Improved performance and stability of mobile systems through debugging and architecture improvements",
-        "Built scalable backend services and authentication systems",
+        "Build production software and AI systems for business clients—including live operational deployments",
+        "Design and integrate backend APIs, data pipelines, and mobile-facing products",
+        "Improve performance and reliability through debugging, architecture, and infrastructure hardening",
+        "Deliver authentication, multi-tenant backends, and automation tools end to end",
       ],
       gradient: "from-accent to-web3-blue",
     },

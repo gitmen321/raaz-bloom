@@ -57,7 +57,7 @@ export const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-nature mx-auto rounded-full mb-6" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Reach out through any of these channels.
+            Have a project to build, a problem to automate, or a role to fill? Let's talk—I'm open to freelance and contract work as well as full-time opportunities.
           </p>
         </motion.div>
 
@@ -110,10 +110,10 @@ export const Contact = () => {
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
           <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
-            Forward Deployed Engineer & Full-Stack Developer open to opportunities where I can embed with teams to ship scalable enterprise systems, AI pipelines, and production infrastructure.
+            Full-stack & AI systems developer, open to freelance projects and full-time opportunities.
           </p>
           <p className="text-muted-foreground text-sm">
-            © 2025 Muhammad Raz. Built with passion for smooth experiences.
+            © {new Date().getFullYear()} Muhammad Raz. Built with passion for smooth experiences.
           </p>
         </motion.div>
       </div>

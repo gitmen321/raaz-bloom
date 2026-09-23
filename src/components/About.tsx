@@ -9,19 +9,19 @@ export const About = () => {
 
   const features = [
     {
-      icon: Blocks,
-      title: "Forward Deployment",
-      description: "Embedding directly with clients to architect scalable web, mobile, and edge-computing solutions in complex enterprise environments",
+      icon: Sparkles,
+      title: "AI Systems That Ship",
+      description: "Building AI and LLM pipelines that go into real production use—not slide decks or throwaway demos",
     },
     {
       icon: Code2,
       title: "Full-Stack Delivery",
-      description: "End-to-end ownership from APIs and AI pipelines to PWAs, hardware ingestion, and production infrastructure",
+      description: "APIs, mobile apps, PWAs, and infrastructure—owned end to end from design through deployment",
     },
     {
-      icon: Sparkles,
-      title: "Execution Philosophy",
-      description: "Optimizing for speed, reliability, and blocker prevention—always prioritizing solutions that are correct, fast, and clean",
+      icon: Blocks,
+      title: "Built for Real Operations",
+      description: "Software for businesses that can't afford downtime—multi-site ops, live POS data, and workflows that have to work every day",
     },
   ];
 
@@ -51,7 +51,7 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90 leading-relaxed">
-              I am a <strong className="text-primary">Forward Deployed Engineer and Full-Stack Developer</strong> specializing in rapid technical deployment for complex enterprise environments. I bridge the gap between operational bottlenecks and high-ROI software ecosystems by embedding directly with clients to architect scalable web, mobile, and edge-computing solutions. My engineering philosophy optimizes for execution speed, reliability, and blocker prevention—always prioritizing solutions that are correct, fast, and clean.
+              I'm an <strong className="text-primary">independent full-stack and AI systems developer</strong>—not currently employed by a company—building production software and AI tools for businesses that need things to work in the real world. Over roughly two years of hands-on work, I've shipped across mobile, backend, and AI systems: from automating procurement decisions to running daily operations at a live fuel station. I focus on problems where reliability and clarity matter as much as the code itself.
             </p>
           </motion.div>
 

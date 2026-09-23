@@ -4,28 +4,31 @@ import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+type Project = {
+  title: string;
+  description: string;
+  features: string[];
+  tech: string[];
+  stats: string;
+  gradient: string;
+  clientFraming?: string;
+  highlightStat?: string;
+  viewUrl?: string;
+  githubUrl?: string;
+};
+
 export const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const projects = [
-    {
-      title: "Rozana Procurement Intelligence Engine",
-      description: "Enterprise procurement intelligence with deterministic LangGraph decision pipelines and auditable AI narration for reproducible purchasing decisions.",
-      features: [
-        "Architected a 7-node LangGraph decision pipeline and deterministic math engine to automate enterprise procurement",
-        "Confined the LLM strictly to a narration layer for 100% reproducible and auditable purchasing decisions",
-        "Ingested 893,437 ERP sales rows into Supabase; identified SAR 642,382 in preventable over-buys during backtesting",
-        "Resolved a severe Supabase database crash loop under 1-2M parallel API calls by enforcing batch writes and concurrency limits",
-        "Built a 15+ endpoint FastAPI backend with human-in-the-loop approval workflows, fully traced via LangSmith",
-      ],
-      tech: ["Python", "LangGraph", "LangChain", "Supabase", "FastAPI", "Claude Haiku", "LangSmith"],
-      stats: "Enterprise AI & Data Architecture (2026)",
-      gradient: "from-web3-blue to-primary",
-    },
+  const projects: Project[] = [
     {
       title: "Station Command — Fuel Station Operations Platform",
-      description: "End-to-end multi-tenant PWA replacing paper workflows for HPCL fuel station operations with embedded Linux POS ingestion.",
+      clientFraming:
+        "Live production deployment for an HPCL fuel station—real daily operations, not a demo project.",
+      // TODO: optional case study link — e.g. caseStudyUrl: "/case-studies/station-command"
+      description:
+        "Replaced paper workflows with a multi-tenant operations app so staff, approvals, and POS data stay in sync—built for a business that runs 24/7.",
       features: [
         "Shipped an end-to-end multi-tenant PWA replacing paper workflows for HPCL fuel station operations",
         "Built a Python sync agent on embedded Linux POS terminals streaming 1,700+ daily transactions to PostgreSQL via Edge Functions",
@@ -38,8 +41,25 @@ export const Projects = () => {
       gradient: "from-primary to-accent",
     },
     {
+      title: "Rozana Procurement Intelligence Engine",
+      highlightStat: "SAR 642,382 in preventable over-buys caught in backtesting",
+      description:
+        "Helped a retail operation cut wasteful purchasing by automating buy decisions with auditable AI—math and rules decide; the model only explains.",
+      features: [
+        "Architected a 7-node LangGraph decision pipeline and deterministic math engine to automate enterprise procurement",
+        "Confined the LLM strictly to a narration layer for 100% reproducible and auditable purchasing decisions",
+        "Ingested 893,437 ERP sales rows into Supabase for analysis and backtesting at scale",
+        "Resolved a severe Supabase database crash loop under 1-2M parallel API calls by enforcing batch writes and concurrency limits",
+        "Built a 15+ endpoint FastAPI backend with human-in-the-loop approval workflows, fully traced via LangSmith",
+      ],
+      tech: ["Python", "LangGraph", "LangChain", "Supabase", "FastAPI", "Claude Haiku", "LangSmith"],
+      stats: "Enterprise AI & Data Architecture (2026)",
+      gradient: "from-web3-blue to-primary",
+    },
+    {
       title: "TaskFlow — SaaS Task Management Platform",
-      description: "Enterprise-grade multi-tenant backend for team task management with advanced dependency resolution and role-based access control.",
+      description:
+        "Gives teams a dependable way to assign work, enforce who can do what, and respect task dependencies—without the chaos of spreadsheets.",
       features: [
         "Modular NestJS REST API with dependency injection, designed for horizontal scaling",
         "Google OAuth2 social login with Argon2id-hashed JWT rotation & session tracking",
@@ -51,11 +71,12 @@ export const Projects = () => {
       tech: ["NestJS", "TypeScript", "PostgreSQL", "Prisma ORM", "Passport.js", "OAuth2", "Docker"],
       stats: "Production Architecture",
       gradient: "from-accent to-web3-blue",
-      githubUrl: "https://github.com/gitmen321/taskflow-backend"
+      githubUrl: "https://github.com/gitmen321/taskflow-backend",
     },
     {
       title: "RZV Backend System",
-      description: "Production-style backend system designed for authentication, wallet transactions, and reward management.",
+      description:
+        "Backend foundation for user accounts, wallets, and rewards—built with the auth, caching, and ops tooling you'd expect before going to production.",
       features: [
         "JWT authentication with refresh token rotation",
         "Redis caching and distributed rate limiting",
@@ -71,7 +92,7 @@ export const Projects = () => {
       stats: "Production Ready",
       gradient: "from-web3-blue to-primary",
       viewUrl: "https://rzv-backend.onrender.com/api/health",
-      githubUrl: "https://github.com/gitmen321/rzv_backend"
+      githubUrl: "https://github.com/gitmen321/rzv_backend",
     },
   ];
 
@@ -109,6 +130,25 @@ export const Projects = () => {
                     {project.stats}
                   </div>
 
+                  {project.clientFraming && (
+                    <p className="text-sm font-medium text-primary border-l-2 border-primary/50 pl-3 leading-relaxed">
+                      {project.clientFraming}
+                    </p>
+                  )}
+
+                  {project.highlightStat && (
+                    <div
+                      className={`rounded-xl border border-primary/30 bg-gradient-to-br ${project.gradient} p-4 shadow-glow`}
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wide text-primary-foreground/80 mb-1">
+                        Impact
+                      </p>
+                      <p className="text-lg font-bold text-primary-foreground leading-snug">
+                        {project.highlightStat}
+                      </p>
+                    </div>
+                  )}
+
                   <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
@@ -119,7 +159,7 @@ export const Projects = () => {
 
                   {project.features && (
                     <ul className="text-muted-foreground text-sm space-y-1 list-disc list-inside mt-2">
-                      {project.features.map(feature => (
+                      {project.features.map((feature) => (
                         <li key={feature}>{feature}</li>
                       ))}
                     </ul>
@@ -138,22 +178,31 @@ export const Projects = () => {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex gap-3 pt-4">
-                    {project.viewUrl && (
-                      <Button variant="outline" size="sm" className="flex-1" asChild>
-                        <a href={project.viewUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          View
-                        </a>
-                      </Button>
-                    )}
-                    <Button variant={project.viewUrl ? "ghost" : "outline"} size="sm" className={project.viewUrl ? "" : "flex-1"} asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </a>
-                    </Button>
-                  </div>
+                  {(project.viewUrl || project.githubUrl) && (
+                    <div className="flex gap-3 pt-4">
+                      {project.viewUrl && (
+                        <Button variant="outline" size="sm" className="flex-1" asChild>
+                          <a href={project.viewUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            View
+                          </a>
+                        </Button>
+                      )}
+                      {project.githubUrl && (
+                        <Button
+                          variant={project.viewUrl ? "ghost" : "outline"}
+                          size="sm"
+                          className={project.viewUrl ? "" : "flex-1"}
+                          asChild
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 mr-2" />
+                            GitHub
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -1,6 +1,6 @@
 # Raaz - Portfolio
 
-Personal portfolio website showcasing my work as a Flutter & Web3 Developer.
+Personal portfolio website showcasing production-grade software and AI systems built for real business operations — full-stack development, operational software, and scalable backends.
 
 ## Tech Stack
 
