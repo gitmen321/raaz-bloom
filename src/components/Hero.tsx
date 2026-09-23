@@ -1,60 +1,65 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Download, Mail } from "lucide-react";
-import { ParticleNetwork } from "./ParticleNetwork";
 import { SplineHero } from "./hero/SplineHero";
+import { useTypewriter } from "@/hooks/use-typewriter";
+import { stampSpring, stampSpringSoft } from "@/lib/motion";
 
 export const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      <ParticleNetwork />
+  const pitch =
+    "I build backends, AI pipelines, and operational software that businesses run on.";
+  const { display: whoamiText, done: whoamiDone } = useTypewriter("$ whoami", 55, 300);
 
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={stampSpringSoft}
             className="space-y-6"
           >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ ...stampSpring, delay: 0.1 }}
               className="inline-block"
             >
-              <span className="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full">
+              <span className="stamp-badge normal-case tracking-wide text-[11px]">
                 Full-Stack Developer • Production AI Systems
               </span>
             </motion.div>
 
+            <p className="font-mono text-sm text-terminal min-h-[1.5rem]" aria-live="polite">
+              {whoamiText}
+              {!whoamiDone && <span className="cursor-blink">▌</span>}
+            </p>
+
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl lg:text-7xl font-bold leading-tight"
+              transition={{ ...stampSpring, delay: 0.15 }}
+              className="text-5xl lg:text-8xl font-bold leading-[1.05]"
             >
               Hi, I'm{" "}
-              <span className="bg-gradient-nature bg-clip-text text-transparent">
-                Muhammad Raz
-              </span>
+              <span className="text-primary not-italic">Muhammad Raz</span>
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl lg:text-2xl text-muted-foreground font-light mb-4"
+              initial={{ opacity: 0, y: 12 }}
+              animate={whoamiDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+              transition={stampSpring}
+              className="text-xl lg:text-2xl text-muted-foreground font-normal mb-4 max-w-xl"
             >
-              I build backends, AI pipelines, and operational software that businesses run on.
+              {pitch}
             </motion.p>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg text-foreground/80 max-w-xl leading-relaxed"
+              transition={{ ...stampSpring, delay: 0.35 }}
+              className="text-lg text-foreground/85 max-w-xl leading-relaxed"
             >
               I design and ship AI-powered tools, APIs, and automation systems that real businesses depend on daily — from enterprise procurement to fuel station operations.
               <br /><br />
@@ -62,9 +67,9 @@ export const Hero = () => {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ ...stampSpring, delay: 0.45 }}
               className="flex flex-wrap gap-4 pt-4"
             >
               <Button variant="hero" size="lg" asChild>
@@ -79,10 +84,6 @@ export const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
-              {/* <Button variant="outline" size="lg">
-                <Download className="w-5 h-5" />
-                Download CV
-              </Button> */}
               <a href="/MuhammadRazCv.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
                   <Download className="w-5 h-5" />
@@ -99,11 +100,10 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right - 3D Spline Animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            initial={{ opacity: 0, scale: 0.94, rotate: 1.5 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ ...stampSpringSoft, delay: 0.2 }}
             className="relative h-[450px] lg:h-[600px]"
           >
             <SplineHero />
@@ -111,19 +111,19 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
+        transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center pt-2"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-muted-foreground"
         >
-          <div className="w-1 h-2 bg-primary rounded-full" />
+          <span className="font-mono text-[10px] uppercase tracking-widest">scroll</span>
+          <div className="h-8 w-px bg-foreground/30" />
         </motion.div>
       </motion.div>
     </section>

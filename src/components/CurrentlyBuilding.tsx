@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Server, GitBranch, CheckCircle2 } from "lucide-react";
+import { SectionRule } from "@/components/ui/section-rule";
+import { stampSpring } from "@/lib/motion";
 
 export const CurrentlyBuilding = () => {
   const ref = useRef(null);
@@ -11,7 +13,6 @@ export const CurrentlyBuilding = () => {
     {
       title: "TaskFlow Platform",
       icon: GitBranch,
-      gradient: "from-web3-blue to-primary",
       description:
         "A SaaS-grade team task management backend with advanced dependency resolution, multi-provider auth, and fine-grained access control.",
       features: [
@@ -24,7 +25,6 @@ export const CurrentlyBuilding = () => {
     {
       title: "RZV Platform",
       icon: Server,
-      gradient: "from-primary to-accent",
       description:
         "A backend-first platform focused on secure authentication, reward systems, and scalable architecture. Evolving toward:",
       features: [
@@ -37,35 +37,31 @@ export const CurrentlyBuilding = () => {
 
   return (
     <section ref={ref} className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/5 to-transparent" />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={stampSpring}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Currently <span className="bg-gradient-web3 bg-clip-text text-transparent">Building</span>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            Currently <span className="heading-accent">Building</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-nature mx-auto rounded-full" />
+          <SectionRule />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+              initial={{ opacity: 0, y: 20, rotate: index === 0 ? -1 : 1 }}
+              animate={isInView ? { opacity: 1, y: 0, rotate: 0 } : { opacity: 0, y: 20, rotate: index === 0 ? -1 : 1 }}
+              transition={{ ...stampSpring, delay: 0.12 + index * 0.1 }}
             >
-              <div className="bg-card/40 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-card relative h-full">
-                <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${project.gradient} rounded-l-2xl`} />
-
+              <div className="paper-card rounded-sm p-8 hover:border-primary/40 transition-colors relative h-full border-l-4 border-l-accent">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className={`p-3 bg-gradient-to-br ${project.gradient} rounded-xl shadow-glow`}>
-                    <project.icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="p-3 border border-primary/30 bg-muted text-primary">
+                    <project.icon className="w-6 h-6" />
                   </div>
                   
                   <div className="flex-1">
@@ -76,13 +72,13 @@ export const CurrentlyBuilding = () => {
                   </div>
                 </div>
 
-                <div className="space-y-3 ml-16">
+                <div className="space-y-3 md:ml-16">
                   {project.features.map((feature, i) => (
                     <motion.div
                       key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.15 + i * 0.1 }}
+                      initial={{ opacity: 0, x: -12 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -12 }}
+                      transition={{ ...stampSpring, delay: 0.2 + index * 0.1 + i * 0.05 }}
                       className="flex items-start gap-3"
                     >
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />

@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        sans: ['"Source Serif 4"', "Georgia", "serif"],
+        serif: ['"Fraunces"', "Georgia", "serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -42,10 +44,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        web3: {
-          blue: "hsl(var(--web3-blue))",
+        terminal: {
+          DEFAULT: "hsl(var(--terminal))",
+          foreground: "hsl(var(--terminal-foreground))",
         },
-        glow: "hsl(var(--glow))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -55,18 +57,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      backgroundImage: {
-        'gradient-nature': 'var(--gradient-nature)',
-        'gradient-web3': 'var(--gradient-web3)',
-        'gradient-hero': 'var(--gradient-hero)',
-      },
       boxShadow: {
-        'glow': 'var(--shadow-glow)',
-        'purple': 'var(--shadow-purple)',
-        'card': 'var(--shadow-card)',
-      },
-      transitionProperty: {
-        'smooth': 'var(--transition-smooth)',
+        paper: "var(--shadow-paper)",
+        "paper-lift": "var(--shadow-paper-lift)",
+        stamp: "var(--shadow-stamp)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -82,36 +76,16 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.5" },
-          "50%": { opacity: "1" },
-        },
-        "slide-in": {
-          "0%": { transform: "translateY(30px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        "spotlight": {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
-          },
+        "stamp-in": {
+          "0%": { opacity: "0", transform: "translateY(16px) scale(0.96) rotate(-2deg)" },
+          "70%": { opacity: "1", transform: "translateY(-2px) scale(1.02) rotate(0.5deg)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1) rotate(0deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "slide-in": "slide-in 0.6s ease-out",
-        "spotlight": "spotlight 2s ease .75s 1 forwards",
+        "stamp-in": "stamp-in 0.55s cubic-bezier(0.34, 1.35, 0.64, 1) forwards",
       },
     },
   },

@@ -1,16 +1,14 @@
-'use client'
-
-import { SplineScene } from "@/components/ui/splite"
-import { Spotlight } from "@/components/ui/spotlight"
+import { SplineScene } from "@/components/ui/splite";
 
 export function SplineHero() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
-      <Spotlight className="absolute -top-40 left-0 opacity-40" fill="white" />
-      <SplineScene
-        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-        className="w-full h-full"
-      />
+    <div className="spline-vintage-frame p-3 md:p-4">
+      <div className="relative h-full min-h-[380px] w-full spline-vintage-tint">
+        <SplineScene
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="h-full w-full"
+        />
+      </div>
     </div>
-  )
+  );
 }

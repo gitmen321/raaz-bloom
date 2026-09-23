@@ -3,6 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SectionRule } from "@/components/ui/section-rule";
+import { stampSpring } from "@/lib/motion";
 
 type Project = {
   title: string;
@@ -100,50 +102,44 @@ export const Projects = () => {
     <section ref={ref} className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={stampSpring}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Featured <span className="bg-gradient-nature bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            Featured <span className="heading-accent">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-web3 mx-auto rounded-full" />
+          <SectionRule />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 28, rotate: 1.2 }}
+              animate={isInView ? { opacity: 1, y: 0, rotate: 0 } : { opacity: 0, y: 28, rotate: 1.2 }}
+              transition={{ ...stampSpring, delay: index * 0.08 }}
               className="group relative"
             >
-              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 h-full transition-all duration-500 hover:border-primary/50 hover:shadow-card hover:-translate-y-2">
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`} />
-
+              <div className="relative paper-card-index rounded-sm p-6 h-full">
                 <div className="relative z-10 space-y-4">
-                  {/* Stats badge */}
-                  <div className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">
-                    {project.stats}
+                  <div className="stamp-badge max-w-full whitespace-normal leading-snug">
+                    [{project.stats}]
                   </div>
 
                   {project.clientFraming && (
-                    <p className="text-sm font-medium text-primary border-l-2 border-primary/50 pl-3 leading-relaxed">
+                    <p className="text-sm font-medium text-primary border-l-2 border-dashed border-primary/40 pl-3 leading-relaxed">
                       {project.clientFraming}
                     </p>
                   )}
 
                   {project.highlightStat && (
-                    <div
-                      className={`rounded-xl border border-primary/30 bg-gradient-to-br ${project.gradient} p-4 shadow-glow`}
-                    >
-                      <p className="text-xs font-semibold uppercase tracking-wide text-primary-foreground/80 mb-1">
+                    <div className="paper-card border-2 border-dashed border-primary/45 p-4 rotate-[-0.5deg]">
+                      <p className="font-mono text-[10px] uppercase tracking-widest text-terminal mb-1">
                         Impact
                       </p>
-                      <p className="text-lg font-bold text-primary-foreground leading-snug">
+                      <p className="text-base font-serif font-semibold text-foreground leading-snug">
                         {project.highlightStat}
                       </p>
                     </div>
@@ -165,13 +161,9 @@ export const Projects = () => {
                     </ul>
                   )}
 
-                  {/* Tech stack */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs bg-secondary/50 text-secondary-foreground px-3 py-1 rounded-full border border-border/50"
-                      >
+                      <span key={tech} className="tech-tag">
                         {tech}
                       </span>
                     ))}

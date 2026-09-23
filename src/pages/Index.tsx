@@ -10,9 +10,9 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground paper-grain">
       {/* Theme Toggle - Fixed Position */}
-      <div className="fixed top-6 right-6 z-50">
+      <div className="fixed top-6 right-6 z-[60]">
         <ThemeToggle />
       </div>
       

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { SectionRule } from "@/components/ui/section-rule";
+import { stampSpring } from "@/lib/motion";
 
 export const Skills = () => {
   const ref = useRef(null);
@@ -10,63 +12,63 @@ export const Skills = () => {
     {
       title: "Languages",
       skills: ["TypeScript", "JavaScript", "Python", "SQL", "Dart"],
-      color: "primary",
     },
     {
       title: "Backend & Cloud",
       skills: ["Node.js", "Express", "FastAPI", "Supabase", "Deno Edge Functions", "AWS Rekognition"],
-      color: "accent",
     },
     {
       title: "AI & LLM Orchestration",
       skills: ["LangChain", "LangGraph", "LangSmith", "Vector DBs", "RAG Pipelines"],
-      color: "web3-blue",
     },
     {
       title: "Frontend & Mobile",
       skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Flutter", "PWAs"],
-      color: "primary",
     },
     {
       title: "Data & Architecture",
       skills: ["PostgreSQL (RLS, pg_cron)", "Redis", "Distributed Caching", "Event-Driven Architecture"],
-      color: "accent",
     },
     {
       title: "Infrastructure & Tools",
       skills: ["Docker", "CI/CD", "Git", "Linux POS Ingestion", "Client Diagnostics"],
-      color: "web3-blue",
     },
   ];
 
   return (
     <section ref={ref} className="py-24 relative overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={stampSpring}
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Skills & <span className="bg-gradient-web3 bg-clip-text text-transparent">Technologies</span>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            Skills & <span className="heading-accent">Technologies</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-nature mx-auto rounded-full" />
+          <SectionRule />
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ ...stampSpring, delay: 0.1 }}
+          className="font-mono text-sm text-terminal mb-12 max-w-5xl mx-auto"
+        >
+          $ ls ./skills
+        </motion.p>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300"
+              initial={{ opacity: 0, scale: 0.97, rotate: -0.5 }}
+              animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.97, rotate: -0.5 }}
+              transition={{ ...stampSpring, delay: categoryIndex * 0.06 }}
+              className="paper-card rounded-sm p-6 hover:border-primary/40 transition-colors"
             >
-              <h3 className="text-xl font-semibold mb-6 text-foreground">
+              <h3 className="font-mono text-sm font-semibold uppercase tracking-wider text-terminal mb-6">
                 {category.title}
               </h3>
               
@@ -74,21 +76,11 @@ export const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ duration: 0.4, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
-                    className="group relative"
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -12 }}
+                    transition={{ ...stampSpring, delay: categoryIndex * 0.06 + skillIndex * 0.03 }}
                   >
-                    <div className={`
-                      px-4 py-2 rounded-lg font-medium text-sm
-                      bg-${category.color}/10 text-${category.color}
-                      border border-${category.color}/20
-                      hover:border-${category.color}/50 hover:shadow-glow
-                      transition-all duration-300 cursor-default
-                      hover:scale-105
-                    `}>
-                      {skill}
-                    </div>
+                    <span className="tech-tag inline-block">{skill}</span>
                   </motion.div>
                 ))}
               </div>
