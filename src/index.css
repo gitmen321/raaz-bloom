@@ -184,18 +184,6 @@
     @apply text-primary italic;
   }
 
-  .spline-vintage-frame {
-    @apply relative h-full w-full overflow-hidden border border-border bg-card shadow-paper;
-  }
-
-  .spline-vintage-frame::after {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at center, transparent 45%, hsl(var(--background) / 0.35) 100%);
-  }
-
   .spline-vintage-tint {
     filter: sepia(0.35) saturate(0.55) hue-rotate(-8deg) brightness(0.92) contrast(1.05);
   }
