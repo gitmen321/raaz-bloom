@@ -50,7 +50,7 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90 leading-relaxed">
-              I'm an <strong className="text-primary font-semibold">independent full-stack and AI systems developer</strong>—not currently employed by a company—building production software and AI tools for businesses that need things to work in the real world. Over roughly two years of hands-on work, I've shipped across mobile, backend, and AI systems: from automating procurement decisions to running daily operations at a live fuel station. I focus on problems where reliability and clarity matter as much as the code itself.
+              I'm a <strong className="text-primary font-semibold">full-stack and AI systems developer</strong> building production software and AI tools for businesses that need things to work in the real world—recently as a Forward Deployed Engineer at Emilda & Co. Over roughly two years of hands-on work, I've shipped across mobile, backend, and AI systems: from automating procurement decisions to running daily operations at a live fuel station. I focus on problems where reliability and clarity matter as much as the code itself.
             </p>
           </motion.div>
 

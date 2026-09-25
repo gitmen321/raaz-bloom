@@ -11,14 +11,14 @@ export const Experience = () => {
 
   const experiences = [
     {
-      company: "Independent Developer (Freelance)",
-      role: "Full-Stack & AI Systems Developer",
-      period: "2025 – Present",
+      company: "Emilda & Co.",
+      role: "Forward Deployed Engineer",
+      period: "August 2025 – August 31, 2026",
       achievements: [
-        "Build production software and AI systems for business clients—including live operational deployments",
-        "Design and integrate backend APIs, data pipelines, and mobile-facing products",
-        "Improve performance and reliability through debugging, architecture, and infrastructure hardening",
-        "Deliver authentication, multi-tenant backends, and automation tools end to end",
+        "Embedded with client teams to design and ship production software, AI systems, and operational tooling in live business environments",
+        "Architected scalable APIs, data pipelines, and automation that business teams depend on day to day",
+        "Owned full-stack delivery from backend and AI orchestration through mobile, PWAs, and infrastructure hardening",
+        "Focused on reliability, clear handoffs, and systems that stay up under real operational load",
       ],
     },
     {
