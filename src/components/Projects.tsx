@@ -59,6 +59,26 @@ export const Projects = () => {
       gradient: "from-web3-blue to-primary",
     },
     {
+      title: "Tailor Assistant — Malayalam Sewing-Machine AI",
+      clientFraming:
+        "Built for my mom's daily tailoring work—real Malayalam use, not a demo—and structured so it can expand to other tailors.",
+      description:
+        "A voice-first assistant that answers machine and stitching questions in Malayalam over a phone PWA and WhatsApp, grounded in her Usha Quick Stitch manual instead of generic advice.",
+      features: [
+        "Shipped a Malayalam-first RAG assistant for a Usha Quick Stitch machine, with a React PWA and WhatsApp (Baileys) sharing one Express API and conversation history",
+        "Ingested the machine manual with heading-aware chunking, 768-dim Gemini embeddings, and pgvector retrieval, falling back to Tavily + YouTube when similarity is weak",
+        "Grounded Gemini answers in hard machine specs so the model cannot invent the wrong machine, stitch type, or motor",
+        "Added Malayalam speech-to-text, TTS, and photo questions so she can talk and show the machine instead of typing",
+        "Wrote web-search answers back into the knowledge base so the assistant learns from fallbacks over time",
+        "Deployed as an installable PWA (Netlify + service worker) with a Railway API, Bearer auth, same-origin /api proxy, and a Three.js 3D machine model on splash",
+      ],
+      tech: ["React", "PWA", "Express", "Gemini", "Supabase", "pgvector", "WhatsApp (Baileys)", "Three.js"],
+      stats: "Voice-first RAG Assistant (2026)",
+      gradient: "from-accent to-primary",
+      viewUrl: "https://mellow-lily-dc4d1e.netlify.app/",
+      githubUrl: "https://github.com/gitmen321/tailor_ai_chatbot",
+    },
+    {
       title: "TaskFlow — SaaS Task Management Platform",
       description:
         "Gives teams a dependable way to assign work, enforce who can do what, and respect task dependencies—without the chaos of spreadsheets.",
