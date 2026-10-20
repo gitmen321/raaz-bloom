@@ -84,7 +84,7 @@ export const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
-              <a href="/MuhammadRazCv.pdf" download target="_blank" rel="noopener noreferrer">
+              <a href="/MuhammadRazFDE.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">
                   <Download className="w-5 h-5" />
                   Download CV
